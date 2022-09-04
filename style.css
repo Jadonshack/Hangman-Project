@@ -1,0 +1,79 @@
+body {
+    background-color: #225a3c;
+    font-family: 'Goldman', cursive;
+    margin: 0px;
+}
+h1 {
+    background-color: #000000;
+    border: 2px dotted #e70000;
+    color: #e70000;
+    border-radius: 2em;
+}
+.guessingDiv {
+    text-align: center;
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+form {
+    font-size: 20px;
+}
+label {
+    display: block;
+    color: #edae49;
+}
+#input1 {
+    text-align: center;
+    font-size: 40px;
+    background-color: #214a34;
+    width: 1em;
+    height: 1em;
+}
+button {
+    /* width: 10em;
+    height: 3em; */
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #5b001b;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+button:hover {
+    background-color: #642b32;
+    border-radius: 10px;
+}
+.hangmanDiv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+}
+
+/* Resize images */
+.hangmanDiv img {
+    width: 100%;
+    height: auto;
+}
+.wordDiv {
+font-size: 60px;
+margin: 25px 0px 25px;
+color: #d5d5d5;
+}
+#letterD {
+    margin: 0px;
+    margin-left: 835px;
+    float: left;
+}
+#letterO {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterG {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
