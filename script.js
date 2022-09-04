@@ -49,5 +49,4 @@ btn.addEventListener("click", function(event) {
         default:
             alert("Oops, try again!");
     }
-
     });
