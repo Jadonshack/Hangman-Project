@@ -1,19 +1,14 @@
-// Global Variables
-
+//Guessing button
 var btn =document.getElementById('btn');
 btn.addEventListener("click", function(event) {
     event.preventDefault();
     // Hangman inputs
     let letter1 = document.getElementById('input1').value;
 
-    //Hangman <p>
-    let letterA = document.getElementById('LetterD');
-
     // If statement to check if letter D is correct
     if (letter1 == 'd') {
         letterD.innerHTML = "D"; 
     } else {
-        alert("Oops, try again!")
     }
     if (letter1 == 'D') {
         letterD.innerHTML = "d"; 
@@ -37,7 +32,22 @@ btn.addEventListener("click", function(event) {
         letterG.innerHTML = "g"; 
     } else {
     }
-    
-    });
+    // Switch to alert player when they guess wrong
+    switch(letter1) {
+        case "d": 
+            break;
+        case "D": 
+            break;
+        case "o": 
+            break;
+        case "O": 
+            break;
+        case "g": 
+            break;
+        case "G": 
+            break;
+        default:
+            alert("Oops, try again!");
+    }
 
-    // If statement to check igf letter is correct
+    });
