@@ -204,5 +204,6 @@ btn.addEventListener("click", function(event) {
                 break;
         }
     }   
+    input1.value = '';
     });
 >>>>>>> 84b7b43ca9b89c3d283b123046487ef8dad5572b
