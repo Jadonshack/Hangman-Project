@@ -99,4 +99,5 @@ btn.addEventListener("click", function(event) {
                 break;
         }
     }   
+    input1.value = '';
     });
