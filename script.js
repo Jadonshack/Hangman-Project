@@ -1,3 +1,4 @@
+
 // Stickman array
 var stickman = [];
 var stickmanAlive = ["1"];
@@ -101,4 +102,3 @@ btn.addEventListener("click", function(event) {
     }   
     input1.value = '';
     });
-    
