@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: #005F73;
     font-family: 'Goldman', cursive;
@@ -152,4 +153,160 @@ button:hover {
     padding: 2px;
     background-color: #000000;
     padding: 6px;
+=======
+body {
+    background-color: #005F73;
+    font-family: 'Goldman', cursive;
+    margin: 0px;
+}
+/* stickman */
+.stickman {
+    display: block;
+    margin-left: 23%;
+    width: 50%;
+    height: auto;
+}
+#gallowBase {
+    height: 0px;
+    width: 0px;
+    font-size: 400px;
+    margin: 0px 60% 0px 0px;
+    float: right;
+}
+#gallowShaft {
+    height: 0px;
+    width: 0px;
+    font-size: 360px;
+    margin: 0px 59% 0px 0px;
+    float: right;
+}
+#legs {
+    height: 0px;
+    width: 0px;
+    font-size: 80px;
+    margin: 20% 40% 0px 0px;
+    float: right;
+    text-align: right;
+}
+#torso {
+    height: 0px;
+    width: 0px;
+    font-size: 60px;
+    margin: 16% -.89% 0px 0px;
+    float: right;
+}
+#arms {
+    height: 0px;
+    width: 0px;
+    font-size: 70px;
+    margin: 13% .7% 0px 0px;
+    float: right;
+}
+#head {
+    height: 0px;
+    width: 0px;
+    font-size: 60px;
+    margin: 12.4% -.3% 0px 0px;
+    float: right;
+}
+#noose {
+    height: 0px;
+    width: 0px;
+    font-size: 60px;
+    margin: -4% -1.6% 0px 0px;
+    padding-top: 13%;
+    float: right;
+}
+#gallowBrace {
+    height: 0px;
+    width: 0px;
+    font-size: 40px;
+    margin: 11% 0% 0% 47.1%;
+    float: left;
+}
+#gallowArm {
+    height: 0px;
+    width: 0px;
+    font-size: 320px;
+    margin: -31% 14.5% 0% 0px;
+    float: right;
+}
+/* wrong letters */
+.wrongLetters {
+    color: #E9D8A6;
+}
+#wrongTitle {
+    height: 62px;
+    padding: 5px;
+    border: 3px solid #9B2226;
+    border-radius: 10px;
+    background-color: #000000;
+     font-size: 25px;
+     margin: -1% 0% 0% 2%;
+     float: left;
+ }
+/* div + para's that control answer */
+.wordDiv {
+    clear: both;
+    font-size: 60px;
+    margin: 25% 0px 25px;
+    color: #E9D8A6;
+    }
+#letterD {
+    margin: 0px;
+    margin-left: 835px;
+    float: left;
+}
+#letterO {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterG {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+/* form elements */
+.guessingDiv {
+    text-align: center;
+    width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+form {
+    font-size: 20px;
+}
+h1 {
+    background-color: #9B2226;
+    border: 2px dotted #000000;
+    color: #E9D8A6;
+    border-radius: 2em;
+}
+#input1 {
+    text-align: center;
+    font-size: 40px;
+    background-color: #0A9396;
+    width: 1em;
+    height: 1em;
+}
+button {
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #9B2226;
+    font-size: 20px;
+    font-weight: bold;
+    color: #E9D8A6;
+}
+button:hover {
+    background-color: #AE2012;
+    border-radius: 10px;
+}
+#add {
+    margin-left: 20px;
+    padding: 2px;
+    background-color: #000000;
+    padding: 6px;
+>>>>>>> 84b7b43ca9b89c3d283b123046487ef8dad5572b
 }
