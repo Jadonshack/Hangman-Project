@@ -93,15 +93,40 @@ body {
 .wordDiv {
     clear: both;
     font-size: 60px;
-    margin: 25% 0px 25px;
+    margin-top: 25%;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
     color: #E9D8A6;
+    width: 360px;
+    text-align: center;
     }
-#letterD {
+#letterA {
     margin: 0px;
-    margin-left: 835px;
+    padding-left: 3.5%;
     float: left;
 }
-#letterO {
+#letterB {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterC {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterD {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterE {
+    margin: 0px;
+    padding-left: 3.5%;
+    float:left;
+}
+#letterF {
     margin: 0px;
     padding-left: 3.5%;
     float:left;
@@ -128,12 +153,16 @@ h1 {
     color: #E9D8A6;
     border-radius: 2em;
 }
-#input1 {
+input {
     text-align: center;
     font-size: 40px;
     background-color: #0A9396;
     width: 1em;
     height: 1em;
+}
+input:hover {
+    background-color: #098587;
+    border-radius: 3px;
 }
 button {
     margin: 5px;
@@ -147,6 +176,32 @@ button:hover {
     background-color: #AE2012;
     border-radius: 10px;
 }
+.keywordDiv {
+    display: block;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+h2 {
+    background-color:#000000;
+    border: 2px dashed #9B2226;
+    color: #E9D8A6;
+    border-radius: 2em;
+    padding: 5px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#btn2 {
+    margin-bottom: 10px;
+}
+#intructions {
+    margin-left: 7.3%;
+    text-align: left;
+    font-size: 10px;
+}
+/* Links */
 .divLinks {
     margin-left: 20px;
     padding: 2px;

@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Hangman Project</title>
+    <title>Hangman Project Two Player</title>
 </head>
         <!--Stickman + Gallows-->
         <div class="stickman">
@@ -26,9 +26,13 @@
         </div>
         <!--Div containing end word-->
         <div class="wordDiv">
-            <p id="letterD">_</p>
-            <p id="letterO">_</p>
-            <p id="letterG">_</p>
+            <p id="letterA"></p>
+            <p id="letterB"></p>
+            <p id="letterC"></p>
+            <p id="letterD"></p>
+            <p id="letterE"></p>
+            <p id="letterF"></p>
+            <p id="letterG"></p>
         </div>
         <!--Div containg guessing form-->
         <div class="guessingDiv">
@@ -38,10 +42,23 @@
                 <button id="btn" type="submit">GUESS!</button>
             </form>
         </div>
-            <div class="divLinks">
-                <a href="Hangman-Custom/index.html" id="twoPlayer" target="_blank">Two Player Custom Keyword Version</a> <br> <br>
-                <a href="https://github.com/Jadonshack" id="add" target="_blank">Interested in what you see? Look here for more!</a>
-            </div>
+        <div class="keywordDiv">
+            <h2>Make your own hangman problem!</h2>
+            <form id="keywordForm">
+                <button id="btn2" type="submit">SET KEYWORD!</button>
+                <input id="inputSet1" type="text" name="blank1" />
+                <input id="inputSet2" type="text" name="blank2" />
+                <input id="inputSet3" type="text" name="blank3" />
+                <input id="inputSet4" type="text" name="blank4" />
+                <input id="inputSet5" type="text" name="blank5" />
+                <input id="inputSet6" type="text" name="blank6" />
+                <input id="inputSet7" type="text" name="blank7" />
+            </form>
+            <p id="intructions">One letter per box maximum</p>
+        </div>
+        <div class="divLinks">
+            <a href="https://github.com/Jadonshack" id="add" target="_blank">Interested in what you see? Look here for more!</a> <br>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
