@@ -7,8 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <title>Hangman Project</title>
 </head>
+    <nav>
+        <a href="Hangman-Custom/index.html" id="twoPlayer" target="_blank">Two Player Custom</a>
+        <a href="https://github.com/Jadonshack" id="add" target="_blank">Github</a>
+    </nav>
+
+    <div id="pageGrid">
+        <!-- Title -->
+        <h1 id="gameTitle">HANGMAN</h1>
         <!--Stickman + Gallows-->
         <div class="stickman">
             <p id="gallowBase">_</p>
@@ -23,25 +32,23 @@
         </div> <br>
         <!--wrong letters-->
         <div class="wrongLetters">
-            <p id="wrongTitle">Wrong Letters:<br></p>
+            <p id="wrongTitle">Wrong Letters</p>
         </div>
-        <!--Div containing end word-->
-        <div class="wordDiv">
-            <p id="letterD">_</p>
-            <p id="letterO">_</p>
-            <p id="letterG">_</p>
+
+        <div class="wordContainerDiv">
+            <!--Div containing end word-->
+            <div class="wordDiv">
+            </div>
         </div>
         <!--Div containg guessing form-->
         <div class="guessingDiv">
-            <h1>Make your guess!</h1>
+            <h1 id="guessingTitle">Make your guess!</h1> <br>
             <form>
-                <input id="input1" type="text" name="A"> <br>
-                <button id="btn" type="submit">GUESS!</button>
+                <input id="inputAnswer" type="text"> <br>
+                <button id="guessBtn" type="submit">GUESS!</button>
             </form>
+            <button id="getWord" onclick="getWord()">Get a new word</button>
         </div>
-            <div class="divLinks">
-                <a href="Hangman-Custom/index.html" id="twoPlayer" target="_blank">Two Player Custom Keyword Version</a> <br> <br>
-                <a href="https://github.com/Jadonshack" id="add" target="_blank">Interested in what you see? Look here for more!</a>
-            </div>
+    </div>    
         <script src="script.js"></script>
     </body>
