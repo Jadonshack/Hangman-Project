@@ -6,6 +6,11 @@ let wrongLetterCount = [];
 let correctLetterCount = [];
 let stickmanAlive = [];
 
+// Stickman array
+var stickman = [];
+var stickmanAlive = ["1"];
+var answer = ["1"];
+
 // function to get and breakdown answer
 async function getWord() {
     let wordData = await fetch('https://random-word-api.herokuapp.com/word')
@@ -120,6 +125,7 @@ guessbtn.addEventListener("click", function(event) {
                 alert("Congradulations! You saved the stick man!");
                 stickmanAlive += "1";
         }
+
     }
     // Clears input for next guess
     inputAnswer.value = '';
