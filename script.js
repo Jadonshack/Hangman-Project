@@ -72,7 +72,7 @@ guessbtn.addEventListener("click", function(event) {
                         let wrongLetter = inputAnswer.value
                         let wrongLetterUpper = $(`<p>${wrongLetter.toUpperCase()}</p>`);
                         $(wrongLetterUpper).attr('id', `wrongLetter${wrongLetterCount.length}`);
-                        $('.wrongLetters').append(wrongLetterUpper);
+                        $('#wrongLettersFlex').append(wrongLetterUpper);
 
                         // Adds hangman
                         wrongLetterCount += '1';

@@ -132,6 +132,14 @@ a:hover {
     font-size: 25px;
     height: 100px;
     width: 250px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+#wrongLettersFlex {
+    display: flex;
+    justify-content: space-around;
 }
 
 #wrongTitle {
