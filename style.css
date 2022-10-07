@@ -1,140 +1,197 @@
-body {
-    background-color: #005F73;
+* {
     font-family: 'Goldman', cursive;
     margin: 0px;
 }
+
+body {
+    background-color: #005F73;
+}
+
+p {
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+    padding: 15px;
+    font-size: 115%;
+    background-color:#0A9396;
+}
+
+#add {
+    color: red;
+}
+
+a:hover {
+    opacity: .7;
+}
+
+#pageGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#gameTitle {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    text-decoration: underline;
+    font-size: 3em;
+    justify-self: center;
+    text-shadow: 2px 1px #9B2226;
+}
+
 /* stickman */
 .stickman {
-    display: block;
-    margin-left: 23%;
-    width: 50%;
-    height: auto;
+    width: 500px;
+    height: 500px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+    grid-template-rows: repeat(14, 25px);
 }
+
+.stickman p {
+    height: 0;
+    width: 0;
+}
+
 #gallowBase {
-    height: 0px;
-    width: 0px;
-    font-size: 400px;
-    margin: 0px 60% 0px 0px;
-    float: right;
+    font-size: 420px;
+    grid-column: 1 / span 10;
+    grid-row: 8;
 }
+
 #gallowShaft {
-    height: 0px;
-    width: 0px;
-    font-size: 360px;
-    margin: 0px 59% 0px 0px;
-    float: right;
+    font-size: 390px;
+    grid-column: 4;
+    grid-row: 8;
 }
+
 #legs {
-    height: 0px;
-    width: 0px;
-    font-size: 80px;
-    margin: 20% 40% 0px 0px;
-    float: right;
-    text-align: right;
+    font-size: 85px;
+    grid-column: 23;
+    grid-row: 12 / span 4;
+    align-self: center;
 }
+
 #torso {
-    height: 0px;
-    width: 0px;
-    font-size: 60px;
-    margin: 16% -.89% 0px 0px;
-    float: right;
+    font-size: 75px;
+    grid-column: 24;
+    grid-row: 14;
+    align-self: center;
 }
+
 #arms {
-    height: 0px;
-    width: 0px;
     font-size: 70px;
-    margin: 13% .7% 0px 0px;
-    float: right;
+    grid-column: 22;
+    grid-row: 13;
+    align-self: center;
 }
+
 #head {
-    height: 0px;
-    width: 0px;
-    font-size: 60px;
-    margin: 12.4% -.3% 0px 0px;
-    float: right;
+    font-size: 70px;
+    grid-column: 22;
+    grid-row: 12;
+    align-self: flex-end;
 }
+
 #noose {
-    height: 0px;
-    width: 0px;
     font-size: 60px;
-    margin: -4% -1.6% 0px 0px;
-    padding-top: 13%;
-    float: right;
+    grid-column: 24;
+    grid-row: 12;
+    align-self: flex-start;
 }
+
 #gallowBrace {
-    height: 0px;
-    width: 0px;
-    font-size: 40px;
-    margin: 11% 0% 0% 47.1%;
-    float: left;
+    font-size: 50px;
+    grid-column: 11;
+    grid-row: 12;
+    align-self: flex-end;
 }
+
 #gallowArm {
-    height: 0px;
-    width: 0px;
     font-size: 320px;
-    margin: -31% 14.5% 0% 0px;
-    float: right;
+    grid-column: 6;
+    grid-row: 1;
 }
+
 /* wrong letters */
 .wrongLetters {
     color: #E9D8A6;
-}
-#wrongTitle {
-    height: 62px;
-    padding: 5px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+    margin: 20px;
     border: 3px solid #9B2226;
     border-radius: 10px;
     background-color: #000000;
-     font-size: 25px;
-     margin: -1% 0% 0% 2%;
-     float: left;
+    font-size: 25px;
+    height: 100px;
+    width: 250px;
+}
+
+#wrongTitle {
+    width: auto;
+    padding: 8px;
+    text-align: center;
+    text-decoration: underline;
  }
+
+ .wrongLetters p {
+    width: 25px;
+    margin: 0px;
+ }
+
 /* div + para's that control answer */
+.wordContainerDiv {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    align-self: flex-end;
+}
+
 .wordDiv {
     clear: both;
-    font-size: 60px;
-    margin: 25% 0px 25px;
+    font-size: 65px;
     color: #E9D8A6;
+    display: flex;
+    justify-content: center;
     }
-#letterD {
-    margin: 0px;
-    margin-left: 835px;
-    float: left;
-}
-#letterO {
-    margin: 0px;
-    padding-left: 3.5%;
-    float:left;
-}
-#letterG {
-    margin: 0px;
-    padding-left: 3.5%;
-    float:left;
-}
+
 /* form elements */
 .guessingDiv {
+    grid-column: 3 / span 2;
+    grid-row: 3;
     text-align: center;
     width: 375px;
     margin-left: auto;
     margin-right: auto;
     clear: both;
+    justify-content: center;
 }
+
 form {
     font-size: 20px;
 }
-h1 {
+
+#guessingTitle {
     background-color: #9B2226;
     border: 2px dotted #000000;
     color: #E9D8A6;
     border-radius: 2em;
 }
-#input1 {
+
+#inputAnswer {
     text-align: center;
     font-size: 40px;
     background-color: #0A9396;
     width: 1em;
     height: 1em;
 }
+
 button {
     margin: 5px;
     border-radius: 10px;
@@ -143,17 +200,16 @@ button {
     font-weight: bold;
     color: #E9D8A6;
 }
+
 button:hover {
     background-color: #AE2012;
     border-radius: 10px;
 }
-.divLinks {
-    margin-left: 20px;
-    padding: 2px;
-    background-color: white;
-    padding: 6px;
-    width: 20.7%;
+
+#getWord {
+    font-weight: normal;
 }
-#add {
-    color: red;
+
+button:disabled {
+    background-color: darkgray;
 }
