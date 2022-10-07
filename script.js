@@ -53,72 +53,76 @@ async function getWord() {
 var guessbtn = document.getElementById('guessBtn');
 guessbtn.addEventListener("click", function(event) {
     event.preventDefault(); 
-
+    // Notifies user if input is empty
     if (inputAnswer.value == '') {
-        alert("Try clicking on the blue box above GUESS and typing something.")
+        alert("Put a letter in the box light blue to guess!")
     } else {
-        if (stickmanAlive.length != 1) {
-            if (correctLetterCount.length != letters.length) {
-                // Checks if users guess is wrong
-                let checkForWrong = letters.find(function(checkingAnswer) {
-                    return checkingAnswer.startsWith(inputAnswer.value);
-                });
-                // If the answer is wrong, adds hangman part and puts wrong letter on page
-                if (checkForWrong == null) {
-                    // Adds wrong letter to page
-                    let wrongLetter = inputAnswer.value
-                    let wrongLetterUpper = $(`<p>${wrongLetter.toUpperCase()}</p>`);
-                    $(wrongLetterUpper).attr('id', `wrongLetter${wrongLetterCount.length}`);
-                    $('.wrongLetters').append(wrongLetterUpper);
-
-                    // Adds hangman
-                    wrongLetterCount += '1';
-                    switch(wrongLetterCount.length) {
-                        case 1:
-                            head.innerHTML = "o";
-                            console.log('head')
-                            break;
-                        case 2:
-                            torso.innerHTML = "|";
-                            console.log('body')
-                            break;
-                        case 3:
-                            arms.innerHTML = "_";
-                            console.log('knees')
-                            alert("Last guess!")
-                            break;
-                        case 4:
-                            legs.innerHTML = "^";
-                            console.log('and toes!')
-                            alert("Oh no! You couldn't save them. Better luck next time");
-                            // Reveals answer for user
-                            letters.forEach(correctAnswer);
-                            function correctAnswer (letter, i) {
-                                let letterUpper = letter.toUpperCase();
-                                $(`#blankSpace${i}`).html(letterUpper);
-                                }
-                            stickmanAlive += "1";
-                            break;
-                    }
-                }
-                // Checks if the users answer is correct, if so, places the correct letter on page
-                letters.forEach(correctAnswer);
-
-                function correctAnswer (letter, i) {
-                    if (inputAnswer.value == letter) {
-                    correctLetterCount += '1';
-                    let letterUpper = letter.toUpperCase();
-                    $(`#blankSpace${i}`).html(letterUpper);
-                    }
-                }
-            }
+        if (letters.length == 0) {
+        alert("Try clicking on the blue box above 'GUESS' and typing something!")
         } else {
-            alert("Want to try again? click on 'Get a new word!'");
-        }
-                // Alerts the user if they have one
-        if (correctLetterCount.length == letters.length) {
-                alert("Congradulations! You saved the stick man!");
-                stickmanAlive += "1";
+            if (stickmanAlive.length != 1) {
+                if (correctLetterCount.length != letters.length) {
+                    // Checks if users guess is wrong
+                    let checkForWrong = letters.find(function(checkingAnswer) {
+                        return checkingAnswer.startsWith(inputAnswer.value);
+                    });
+                    // If the answer is wrong, adds hangman part and puts wrong letter on page
+                    if (checkForWrong == null) {
+                        // Adds wrong letter to page
+                        let wrongLetter = inputAnswer.value
+                        let wrongLetterUpper = $(`<p>${wrongLetter.toUpperCase()}</p>`);
+                        $(wrongLetterUpper).attr('id', `wrongLetter${wrongLetterCount.length}`);
+                        $('.wrongLetters').append(wrongLetterUpper);
+
+                        // Adds hangman
+                        wrongLetterCount += '1';
+                        switch(wrongLetterCount.length) {
+                            case 1:
+                                head.innerHTML = "o";
+                                console.log('head')
+                                break;
+                            case 2:
+                                torso.innerHTML = "|";
+                                console.log('body')
+                                break;
+                            case 3:
+                                arms.innerHTML = "_";
+                                console.log('knees')
+                                alert("Last guess!")
+                                break;
+                            case 4:
+                                legs.innerHTML = "^";
+                                console.log('and toes!')
+                                alert("Oh no! You couldn't save them. Better luck next time");
+                                // Reveals answer for user
+                                letters.forEach(correctAnswer);
+                                function correctAnswer (letter, i) {
+                                    let letterUpper = letter.toUpperCase();
+                                    $(`#blankSpace${i}`).html(letterUpper);
+                                    }
+                                stickmanAlive += "1";
+                                break;
+                        }
+                    }
+                    // Checks if the users answer is correct, if so, places the correct letter on page
+                    letters.forEach(correctAnswer);
+
+                    function correctAnswer (letter, i) {
+                        if (inputAnswer.value == letter) {
+                        correctLetterCount += '1';
+                        let letterUpper = letter.toUpperCase();
+                        $(`#blankSpace${i}`).html(letterUpper);
+                        }
+                    }
+                }
+            } else {
+                alert("Want to try again? click on 'Get a new word!'");
+            }
+                    // Alerts the user if they have one
+            if (correctLetterCount.length == letters.length) {
+                    alert("Congradulations! You saved the stick man!");
+                    stickmanAlive += "1";
+            }
         }
     }
     // Clears input for next guess
