@@ -1,2 +1,3 @@
 open 'index' to begin the program!
-Make sure browser is fullscreen (working on it)
+It's a little difficult right now, working on changable difficulties.
+As well as another side project that can help you guess the word!
