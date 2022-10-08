@@ -19,7 +19,13 @@ async function getWord() {
     }
     for (var i =0; i < wrongLetterCount.length; i++) {
         $(`#wrongLetter${[i]}`).remove();
+
     }
+    // Rsets hangman
+    arms.innerHTML = '';
+    head.innerHTML = '';
+    torso.innerHTML = '';
+    legs.innerHTML = '';
     // Reset counting arrays
     letters = [];
     wrongLetterCount = [];
@@ -32,7 +38,7 @@ async function getWord() {
     letters = word.split("");
 
     // Filters out words of a certain length (eventually have multiple options for user)
-    if (letters.length <= 5) {
+    if (letters.length >= 12) {
 
         document.getElementById("getWord").disabled = false;
 
